@@ -1,0 +1,10 @@
+{
+  "id": "euler_02_coin_partitions",
+  "title": "Euler: Integer Partitions Modulo M (Pentagonal Theorem)",
+  "category": "coding",
+  "difficulty": "medium",
+  "timeout_sec": 300,
+  "verify_timeout_sec": 15,
+  "prompt": "Implement `partition_mod(n: int, mod: int) -> int` in `solution.py` in the current working directory. It must return p(n) % mod, where p(n) is the number of integer partitions of n (p(0) = 1). Your implementation MUST handle n = 50_000 in under 4 seconds in pure Python (hint: O(n^2) DP will be too slow; consider Euler's pentagonal number theorem). Verify with `python -m unittest test_basic.py` and benchmark n = 50_000. Do NOT modify `test_basic.py` and stop once verified.",
+  "verify_cmd": ["python", "-m", "unittest", "discover", "-s", ".", "-p", "test_*.py", "-v"]
+}

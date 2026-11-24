@@ -1,0 +1,10 @@
+{
+  "id": "euler_01_totient_sum",
+  "title": "Euler: Counting Reduced Proper Fractions (Totient Sum)",
+  "category": "coding",
+  "difficulty": "medium",
+  "timeout_sec": 300,
+  "verify_timeout_sec": 15,
+  "prompt": "Implement `count_reduced_fractions(max_d: int) -> int` in `solution.py` in the current working directory. It must return the number of reduced proper fractions n/d with 1 <= n < d <= max_d and gcd(n, d) == 1 (return 0 if max_d < 2). Your implementation MUST be fast enough to handle max_d = 1_000_000 in under 3 seconds in pure Python. Verify with `python -m unittest test_basic.py` and test performance on max_d = 1_000_000. Do NOT modify `test_basic.py` and stop once verified.",
+  "verify_cmd": ["python", "-m", "unittest", "discover", "-s", ".", "-p", "test_*.py", "-v"]
+}

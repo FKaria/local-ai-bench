@@ -1,0 +1,127 @@
+[
+  {
+    "id": "math_notools_01_arith",
+    "title": "Mental Multiplication (No Tools)",
+    "category": "math",
+    "difficulty": "easy",
+    "allow_tools": false,
+    "grader": "integer",
+    "timeout_sec": 90,
+    "prompt": "Compute 487 * 936 exactly without using any tools. Put ONLY the final integer inside \\boxed{...}.",
+    "expected": "455832"
+  },
+  {
+    "id": "math_notools_02_quadratic",
+    "title": "Quadratic Equation Roots (No Tools)",
+    "category": "math",
+    "difficulty": "easy",
+    "allow_tools": false,
+    "grader": "set",
+    "timeout_sec": 90,
+    "prompt": "Find the solutions to 2x^2 - 7x - 15 = 0 without using any tools. Write the solutions as a comma-separated list inside \\boxed{...}.",
+    "expected_set": [-1.5, 5.0]
+  },
+  {
+    "id": "math_notools_03_integral",
+    "title": "Indefinite Integral (No Tools)",
+    "category": "math",
+    "difficulty": "medium",
+    "allow_tools": false,
+    "grader": "antiderivative",
+    "var": "x",
+    "integrand": "exp(x) * (1 + sin(x))/(1 + cos(x))",
+    "expected_expr": "tan(x/2) * exp(x)",
+    "timeout_sec": 300,
+    "prompt": "Compute the indefinite integral of exp(x) * (1 + sin(x))/(1 + cos(x)) dx without using any tools. Give the antiderivative in terms of x inside \\boxed{...}."
+  },
+  {
+    "id": "math_notools_04_ode",
+    "title": "First-Order ODE General Solution (No Tools)",
+    "category": "math",
+    "difficulty": "medium",
+    "allow_tools": false,
+    "grader": "ode_implicit",
+    "ode_rhs": "y / (2*y*log(y) + y - x)",
+    "y_positive": true,
+    "expected_expr": "x = y * log(y) + C/y",
+    "timeout_sec": 300,
+    "prompt": "Solve the differential equation dy/dx = y/(2y log(y) + y - x) without using any tools. Write the answer as an equation in terms of x, y, and a constant C. Output your answer inside \\boxed{...}."
+  },
+  {
+    "id": "math_olymp_01_quad_square",
+    "title": "Olympiad: Integer Solutions for Quadratic Perfect Square",
+    "category": "math",
+    "difficulty": "medium",
+    "allow_tools": false,
+    "grader": "set",
+    "timeout_sec": 300,
+    "prompt": "Find all integers n (positive, zero, or negative) such that n^2 + 11n + 34 is a perfect square. Do not use any tools. List all such integers n separated by commas inside \\boxed{...}.",
+    "expected_set": [-9.0, -6.0, -5.0, -2.0]
+  },
+  {
+    "id": "math_olymp_02_diophantine_pairs",
+    "title": "Olympiad: Counting Positive Diophantine Pairs",
+    "category": "math",
+    "difficulty": "medium",
+    "allow_tools": false,
+    "grader": "integer",
+    "timeout_sec": 300,
+    "prompt": "Find the total number of ordered pairs of positive integers (x, y) satisfying 4/x + 7/y = 1/6. Do not use any tools. Put ONLY the final integer inside \\boxed{...}.",
+    "expected": "30"
+  },
+  {
+    "id": "math_olymp_03_quartic_square",
+    "title": "Olympiad: Integer Solutions to Quartic Perfect Square",
+    "category": "math",
+    "difficulty": "hard",
+    "allow_tools": false,
+    "grader": "set",
+    "timeout_sec": 600,
+    "prompt": "Find all integers x such that x^4 + 2x^3 + 3x^2 + 6x + 13 is a perfect square. Do not use any tools. List all such integers x separated by commas inside \\boxed{...}.",
+    "expected_set": [-3.0, -1.0, 1.0]
+  },
+  {
+    "id": "math_olymp_04_subset_sum_mod5",
+    "title": "Olympiad: Subsets with Sum Divisible by 5 (Roots of Unity)",
+    "category": "math",
+    "difficulty": "hard",
+    "allow_tools": false,
+    "grader": "integer",
+    "timeout_sec": 600,
+    "prompt": "How many subsets S of {1, 2, 3, ..., 15} (including the empty set) have the property that the sum of the elements of S is divisible by 5? Do not use any tools. Put ONLY the final integer inside \\boxed{...}.",
+    "expected": "6560"
+  },
+  {
+    "id": "math_01_sum_squares",
+    "title": "Sum of Squares (Divisible by 3 or 5)",
+    "category": "math",
+    "difficulty": "easy",
+    "allow_tools": true,
+    "grader": "integer",
+    "timeout_sec": 120,
+    "prompt": "Compute the sum of the squares of all integers n with 1 <= n <= 100 such that n is divisible by 3 or divisible by 5 (or both). You may use Python/tools in the current working directory if you wish. Write ONLY the final integer to a file named `answer.txt` in the current working directory, and also include it in your final response inside \\boxed{...}.",
+    "expected": "164036"
+  },
+  {
+    "id": "math_02_modular_pow",
+    "title": "Last 4 Digits of 7^2026",
+    "category": "math",
+    "difficulty": "easy",
+    "allow_tools": true,
+    "grader": "integer",
+    "timeout_sec": 120,
+    "prompt": "Compute the last 4 digits of 7^2026. You may use Python/tools in the current working directory if you want. Write ONLY the last four digits to a file named `answer.txt` in the current working directory. Also include it in your final response inside \\boxed{...}.",
+    "expected": "5649"
+  },
+  {
+    "id": "math_03_combinatorics",
+    "title": "6-Letter Strings Without Adjacent Duplicates",
+    "category": "math",
+    "difficulty": "easy",
+    "allow_tools": true,
+    "grader": "integer",
+    "timeout_sec": 120,
+    "prompt": "How many 6-letter strings formed from the alphabet {A, B, C, D} contain at least one 'A' and have no two adjacent identical letters? You may use Python/tools in the current working directory if you wish. Write ONLY the final integer to a file named `answer.txt` in the current working directory, and also include it in your final response inside \\boxed{...}.",
+    "expected": "876"
+  }
+]

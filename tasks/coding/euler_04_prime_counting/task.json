@@ -1,0 +1,10 @@
+{
+  "id": "euler_04_prime_counting",
+  "title": "Euler: Sublinear Sum of Primes up to N (Lucy_Hedgehog DP)",
+  "category": "coding",
+  "difficulty": "hard",
+  "timeout_sec": 600,
+  "verify_timeout_sec": 15,
+  "prompt": "Implement `sum_primes_upto(n: int) -> int` in `solution.py` in the current working directory. It must return the exact sum of all prime numbers <= n (returning 0 if n < 2). Your implementation MUST be sublinear in n and compute `sum_primes_upto(2_345_678_901)` in under 4 seconds in pure Python (an ordinary sieve up to n will run out of time/memory). Verify with `python -m unittest test_basic.py` and benchmark `sum_primes_upto(10**9)`. Do NOT modify `test_basic.py` and stop once verified.",
+  "verify_cmd": ["python", "-m", "unittest", "discover", "-s", ".", "-p", "test_*.py", "-v"]
+}

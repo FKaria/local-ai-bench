@@ -1,0 +1,9 @@
+{
+  "id": "code_02_feature_interval_merge",
+  "title": "Implement Interval Merger",
+  "category": "coding",
+  "difficulty": "easy",
+  "timeout_sec": 180,
+  "prompt": "Implement `merge_intervals` and `total_covered_length` in `intervals.py` in the current working directory according to their docstrings (including empty input, unsorted input, touching/nested intervals, and negative coordinates). Verify with `python -m unittest test_basic.py`. Do NOT modify `test_basic.py` and stop once tests pass.",
+  "verify_cmd": ["python", "-m", "unittest", "discover", "-s", ".", "-p", "test_*.py", "-v"]
+}

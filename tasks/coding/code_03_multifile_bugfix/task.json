@@ -1,0 +1,9 @@
+{
+  "id": "code_03_multifile_bugfix",
+  "title": "Fix Multi-File CSV Stats Pipeline",
+  "category": "coding",
+  "difficulty": "easy",
+  "timeout_sec": 180,
+  "prompt": "Fix the bugs spanning `parser.py` and `stats.py` in the current working directory. `parse_prices(csv_text)` must parse CSV with header `item,price` (handling quoted item names containing commas, whitespace, and blank lines) and return a list of floats. `summarize_prices(csv_text)` must return `{'count': int, 'mean': float, 'median': float}` with exact median for odd and even counts (`{'count': 0, 'mean': 0.0, 'median': 0.0}` when empty). Verify with `python -m unittest test_basic.py`. Do NOT modify `test_basic.py` and stop once tests pass.",
+  "verify_cmd": ["python", "-m", "unittest", "discover", "-s", ".", "-p", "test_*.py", "-v"]
+}

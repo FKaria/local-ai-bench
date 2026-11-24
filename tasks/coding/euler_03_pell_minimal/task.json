@@ -1,0 +1,10 @@
+{
+  "id": "euler_03_pell_minimal",
+  "title": "Euler: Pell Equation Minimal Solution (Continued Fractions)",
+  "category": "coding",
+  "difficulty": "hard",
+  "timeout_sec": 600,
+  "verify_timeout_sec": 15,
+  "prompt": "Implement `solve_pell(D: int) -> tuple[int, int]` and `max_x_pell_d(limit: int) -> int` in `solution.py` in the current working directory. For any non-square positive integer D, `solve_pell(D)` must return the minimal positive integer solution (x, y) to x^2 - D*y^2 = 1 (using exact arbitrary-precision integers; raise ValueError if D is a perfect square or < 2). `max_x_pell_d(limit)` must return the non-square integer D <= limit that yields the largest minimal x. Your solution must handle limit = 1500 (including D = 61, 109, 661, 1381 where x exceeds 10^14) in under 2 seconds. Verify with `python -m unittest test_basic.py` and test on D = 61 and limit = 1000. Do NOT modify `test_basic.py` and stop once verified.",
+  "verify_cmd": ["python", "-m", "unittest", "discover", "-s", ".", "-p", "test_*.py", "-v"]
+}

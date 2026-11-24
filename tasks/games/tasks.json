@@ -1,0 +1,83 @@
+[
+  {
+    "id": "game_01_mastermind_easy",
+    "title": "Game: Mastermind Easy (4 Pegs, 6 Colors, No Tools)",
+    "category": "game",
+    "difficulty": "easy",
+    "allow_tools": false,
+    "timeout_sec": 180,
+    "game": "mastermind",
+    "game_config": {
+      "code_len": 4,
+      "num_colors": 6,
+      "max_turns": 10,
+      "seed": 17
+    },
+    "prompt": "You are playing a single-player game of Mastermind with NO tools. Deduce the hidden 4-digit code (each digit is 1..6; duplicates allowed) within 10 guesses using the Exact and Misplaced feedback after each turn. On every turn, end your response with your chosen guess inside square brackets, e.g. `[guess 1 2 3 4]`."
+  },
+  {
+    "id": "game_02_mastermind_hard",
+    "title": "Game: Mastermind Hard (5 Pegs, 8 Colors, Tools Allowed)",
+    "category": "game",
+    "difficulty": "hard",
+    "allow_tools": true,
+    "timeout_sec": 600,
+    "game": "mastermind",
+    "game_config": {
+      "code_len": 5,
+      "num_colors": 8,
+      "max_turns": 12,
+      "seed": 42
+    },
+    "prompt": "Play and win a game of Mastermind using `play.py` in the current working directory. Start by running `python play.py status` to see the rules, then submit guesses via `python play.py guess <5 digits from 1..8 separated by spaces>` (e.g. `python play.py guess 1 2 3 4 5`). You have at most 12 guesses to crack the hidden 5-digit code (duplicates allowed). You ARE allowed and encouraged to write/run Python scripts in the current working directory to filter candidate codes and choose optimal guesses. Keep playing until the status shows WON (or LOST), then summarize your result."
+  },
+  {
+    "id": "game_03_minesweeper_easy",
+    "title": "Game: Minesweeper Easy (5x5, 4 Mines, No Tools)",
+    "category": "game",
+    "difficulty": "easy",
+    "allow_tools": false,
+    "timeout_sec": 240,
+    "game": "minesweeper",
+    "game_config": {
+      "rows": 5,
+      "cols": 5,
+      "num_mines": 4,
+      "max_turns": 35,
+      "seed": 7,
+      "start_cell": [0, 0]
+    },
+    "prompt": "You are playing a single-player game of Minesweeper (5x5 grid, 4 mines, 0-indexed rows and columns) with NO tools. Uncover all safe cells without hitting a mine. On every turn, end your response with exactly one command inside square brackets: `[reveal row col]` or `[flag row col]` (e.g. `[reveal 2 3]`)."
+  },
+  {
+    "id": "game_04_minesweeper_medium",
+    "title": "Game: Minesweeper Medium (7x7, 8 Mines, Tools Allowed)",
+    "category": "game",
+    "difficulty": "medium",
+    "allow_tools": true,
+    "timeout_sec": 360,
+    "game": "minesweeper",
+    "game_config": {
+      "rows": 7,
+      "cols": 7,
+      "num_mines": 8,
+      "max_turns": 60,
+      "seed": 1337,
+      "start_cell": [3, 3]
+    },
+    "prompt": "Play and win a game of Minesweeper (7x7 grid, 8 mines, 0-indexed rows and columns) using `play.py` in the current working directory. Start by running `python play.py status`, then play via `python play.py reveal <row> <col>` (and optionally `python play.py flag <row> <col>`). You ARE allowed to write/run Python scripts in the current working directory to analyze the board and deduce guaranteed safe cells. Uncover every safe cell without hitting any mine, and stop once the status shows WON or LOST."
+  },
+  {
+    "id": "game_05_sokoban",
+    "title": "Game: Sokoban (3-Box Spatial Puzzle, No Tools)",
+    "category": "game",
+    "difficulty": "hard",
+    "allow_tools": false,
+    "timeout_sec": 600,
+    "game": "sokoban",
+    "game_config": {
+      "max_turns": 80
+    },
+    "prompt": "You are playing a single-player 3-box Sokoban puzzle with NO tools (`#` wall, `@` player, `$` box, `.` goal, `*` box on goal). Push all 3 boxes onto the 3 goals within 80 moves. On every turn, end your response with exactly one move inside square brackets: `[up]`, `[down]`, `[left]`, `[right]`, or `[reset]`."
+  }
+]

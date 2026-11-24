@@ -1,0 +1,9 @@
+{
+  "id": "code_01_bugfix_rle",
+  "title": "Fix Run-Length Encoding Bug",
+  "category": "coding",
+  "difficulty": "easy",
+  "timeout_sec": 180,
+  "prompt": "Fix the bugs in `rle.py` in the current working directory so that `encode(s: str) -> str` compresses consecutive identical characters as `<count><char>` (`''` -> `''`) and `decode(s: str) -> str` inverts `encode` for any positive integer run length (including multi-digit counts like `'12a3b'`). Verify your fix by running `python -m unittest test_basic.py`. Do NOT modify `test_basic.py` and stop once tests pass.",
+  "verify_cmd": ["python", "-m", "unittest", "discover", "-s", ".", "-p", "test_*.py", "-v"]
+}
